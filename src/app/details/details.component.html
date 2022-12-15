@@ -1,0 +1,82 @@
+<nav class="navbar navbar-light bg-info">
+    <div class="container">
+        <h1>Details of Employees</h1>
+        <div class="d-flex">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          AddEmployee
+        </button>
+        </div>
+    </div>
+</nav>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="col">Employee_Id</th>
+            <th class="col">Emp_Firstname</th>
+            <th class="col">Emp_Lastname</th>
+            <th class="col">Mobile_No:</th>
+            <th class="col">Email</th>
+            <th class="col">Salary</th>
+            <th class="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button type="button" class="btn btn-success">Edit</button>&nbsp;
+                <button type="button" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">Employee_Details</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="InputEmp_Firstname" class="form-label">Emp_Firstname</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="InputEmp_Lastname" class="form-label">Emp_Lastname</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="InputMobile_No" class="form-label">Mobile_No</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputSalary" class="form-label">Salary</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
