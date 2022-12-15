@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-
+// CALLING GET METHOD
   getEmployee(data: any) {
     return this.http.get<any>('http://localhost:3000/posts').pipe(
       map((res: any) => {
@@ -15,6 +15,7 @@ export class ApiService {
       })
     );
   }
+  // CALLING POST METHOD
   postEmployee(data: any) {
     return this.http.post<any>('http://localhost:3000/posts', data).pipe(
       map((res: any) => {
