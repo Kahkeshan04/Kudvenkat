@@ -3,8 +3,8 @@
         <h1>Details of Employees</h1>
         <div class="d-flex">
             <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          AddEmployee
-        </button>
+                AddEmployee
+            </button>
         </div>
     </div>
 </nav>
@@ -22,12 +22,12 @@
     </thead>
     <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>EMPWP1234</td>
+            <td>Sanjay</td>
+            <td>Kumar</td>
+            <td>85694782132</td>
+            <td>sanjay@gmail.com</td>
+            <td>7LPA</td>
             <td>
                 <button type="button" class="btn btn-success">Edit</button>&nbsp;
                 <button type="button" class="btn btn-danger">Delete</button>
@@ -36,8 +36,7 @@
     </tbody>
 </table>
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-4" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -45,38 +44,38 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form [formGroup]="formValue">
                     <div class="mb-3">
                         <label for="InputEmp_Firstname" class="form-label">Emp_Firstname</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" formControlName="Emp_Firstname" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                     </div>
 
                     <div class="mb-3">
                         <label for="InputEmp_Lastname" class="form-label">Emp_Lastname</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" formControlName="Emp_Lastname" class="form-control" id="exampleInputPassword1" />
                     </div>
 
                     <div class="mb-3">
                         <label for="InputMobile_No" class="form-label">Mobile_No</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" formControlName="Mobile_No" class="form-control" id="exampleInputPassword1" />
                     </div>
 
                     <div class="mb-3">
                         <label for="InputEmail" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" formControlName="Email" class="form-control" id="exampleInputPassword1" />
                     </div>
                     <div class="mb-3">
                         <label for="InputSalary" class="form-label">Salary</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1">
+                        <input type="text" formControlName="Salary" class="form-control" id="exampleInputPassword1" />
                     </div>
-
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
+                    Close
+                </button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
+</div>
