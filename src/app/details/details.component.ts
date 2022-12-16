@@ -14,7 +14,8 @@ export class DetailsComponent implements OnInit {
   formValue!: FormGroup;
 
   datatypesobj:DatatypesModel=new DatatypesModel();
-  
+  api: any;
+
 
   constructor(private formBuilder: FormBuilder) {}
 
