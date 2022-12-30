@@ -7,8 +7,9 @@ import { map } from 'rxjs';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
+  
 // CALLING GET METHOD
-  getEmployee(data: any) {
+  getdata(data: any) {
     return this.http.get<any>('http://localhost:3000/posts').pipe(
       map((res: any) => {
         return res;
@@ -16,21 +17,22 @@ export class ApiService {
     );
   }
   // CALLING POST METHOD
-  postEmployee(data: any) {
+  postdata(data: any) {
     return this.http.post<any>('http://localhost:3000/posts', data).pipe(
       map((res: any) => {
         return res;
       })
     );
 
-    // updateEmploye(data : any,id: number){
-    //   return this.http.put<any>('http://localhost:3000/posts'+id,data).pipe(
+    // editdata(data : any,id: number){
+    //   return this.http.put<any>('http://localhost:3000/posts/'+id,data).pipe(
     //     map(res:any)=>{
     //     return res;
     //   })
     // );
-    // deleteEmploye(id: number){
-    //   return this.http.delete<any>('http://localhost:3000/posts' +id)
+
+    // deleteEmploye(data:any,id: number){
+    //   return this.http.delete<any>('http://localhost:3000/posts/' +id)
     //   .pipe(map((res:any)=>{
     //     return res;
     //   }))

@@ -2,8 +2,11 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "firstname": "Vijay ",
+      "lastname": "Kumar",
+      "Mobile": "9603722638",
+      "Email": "vijay1021.gummadi@gmail.com",
+      "Salary": "6lpa"
     }
   ],
   "comments": [

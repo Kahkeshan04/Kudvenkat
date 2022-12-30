@@ -13,43 +13,36 @@ export class DetailsComponent implements OnInit {
 
   formValue!: FormGroup;
 
-  datatypesobj:DatatypesModel=new DatatypesModel();
-  api: any;
+  typesobj:DatatypesModel=new DatatypesModel();
 
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,private api:ApiService) {}
 
   ngOnInit(): void {
     this.formValue = this.formBuilder.group({
       firstname:[''],
       lastname:[''],
-      Mobile_No:[''],
+      Mobile:[''],
       Email:[''],
       Salary:[''],
-
-
-      // Checking with different Datatpes
-      // Firstname:[''],
-      // Lastname:[''],
-      // Mobile_No:[''],
-      // Email:[''],
-      // Salary:[''],
     });
   }
-postEmployeeDetails(){
-  this.datatypesobj.firstname=this.formValue.value.firstname;
-  this.datatypesobj.lastname=this.formValue.value.lastname;
-  this.datatypesobj.Mobile_No=this.formValue.value.Mobile_No;
-  this.datatypesobj.Email=this.formValue.value.Email;
-  this.datatypesobj.Salary=this.formValue.value.Salary;
 
-   this.api.postEmployee(this.datatypesobj)
-   .subscribe((res: any)=>{
+postEmpDetails(){
+  this.typesobj.firstname=this.formValue.value.firstname;
+  this.typesobj.lastname=this.formValue.value.lastname;
+  this.typesobj.Mobile=this.formValue.value.Mobile;
+  this.typesobj.Email=this.formValue.value.Email;
+  this.typesobj.Salary=this.formValue.value.Salary;
+
+
+   this.api.postdata(this.typesobj)
+   .subscribe((res)=>{
     console.log(res);
     alert("Employee added Successfully");
 },
-     (     _err: any)=>{
-  alert("Something went wrong");
+     err=>{
+  alert("Something went wrong, May de Employee data doen't added to the data base ");
 })
 }
 }
