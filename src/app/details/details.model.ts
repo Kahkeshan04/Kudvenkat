@@ -4,5 +4,7 @@ export class DatatypesModel{
     lastname:string='';
     Mobile:string='';
     Email:string='';
-    Salary:string=''
+    Salary:string='';
+    Position?:string='';
+
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,17 +8,19 @@ import { map } from 'rxjs';
 export class ApiService {
   constructor(private http: HttpClient) {}
   
+   url='http://localhost:3000/posts';
 // CALLING GET METHOD
-  getdata(data: any) {
-    return this.http.get<any>('http://localhost:3000/posts').pipe(
+
+  getdata( ):Observable<any> {
+    return this.http.get(this.url).pipe(
       map((res: any) => {
         return res;
       })
     );
   }
   // CALLING POST METHOD
-  postdata(data: any) {
-    return this.http.post<any>('http://localhost:3000/posts', data).pipe(
+  postdata(data: any):Observable<any> {
+    return this.http.post('http://localhost:3000/posts', data).pipe(
       map((res: any) => {
         return res;
       })
