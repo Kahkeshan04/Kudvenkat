@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DatatypesModel } from './details.model';
 import { ApiService } from '../service/api.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -29,12 +30,11 @@ export class DetailsComponent implements OnInit {
       Position: [''],
     });
     this.getAllDetails()
-
-    // this.api.getdata().subscribe(data =>{
-    //   this.detailList=data;
-    // })
   }
-  getAllDetails() {
+
+  //Get Method calling 
+
+  getAllDetails(){
     this.api.getdata().subscribe(res => {
       this.detailsList = res;
     })
@@ -59,10 +59,27 @@ export class DetailsComponent implements OnInit {
       },
         err => {
           alert("Something went wrong, May de Employee data doesn't added to the data base");
-        })
+        })  
   }
 
+  deleteEmp(row:any){
 
+    // this.api.deleteEmployee(row.id).subscribe(res=>{
+    //   alert("Deleted Selected Data Successfully");
+    //   this.getAllDetails()
+    // })
+  }
 
-
+  // onEdit(){
+  //   this.formValue.controls['firstname'].setValue(row.firstname);
+  //   this.formValue.controls['lastname'].setValue(row.lastname);
+  //   this.formValue.controls['Mobile'].setValue(row.Mobile);
+  //   this.formValue.controls['Email'].setValue(row.Email);
+  //   this.formValue.controls['Salary'].setValue(row.Salary);
+  // }
 }
+
+
+
+
+
