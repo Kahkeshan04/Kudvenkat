@@ -22,27 +22,28 @@
     </thead>
     <tbody>
         <tr *ngFor="let detail of detailsList">
-            <td>{{detail.Employee_Id}}</td>
+            <td>{{detail.id}}</td>
             <td>{{detail.firstname}}</td>
             <td>{{detail.lastname}}</td>
-            <td>{{detail.Mobile_No}}</td>
-            <td>{{detail.email}}</td>
+            <td>{{detail.Mobile}}</td>
+            <td>{{detail.Email}}</td>
             <td>{{detail.Salary}}</td>
             <td>
-                <button type="button" class="btn btn-success">Edit</button>&nbsp;
-                <button type="button" class="btn btn-danger">Delete</button>
+                <!-- <button type="button" (click)="onEdit(Row)" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
+                <button type="button" class="btn btn-danger" (click)="deleteEmp()">Delete</button> -->
             </td>
 
         </tr>
     </tbody>
 </table>
 
-<div class="modal fade" id="exampleModal" tabindex="-4" aria-hidden="true">
+<div class=" modal fade" id="exampleModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">Employee_Details</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal
+                   " aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
