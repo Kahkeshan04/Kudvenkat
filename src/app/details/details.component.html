@@ -2,9 +2,10 @@
     <div class="container">
         <h1>Details of Employees</h1>
         <div class="d-flex">
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 AddEmployee
-            </button>
+          </button>
+
         </div>
     </div>
 </nav>
@@ -29,10 +30,10 @@
             <td>{{detail.Email}}</td>
             <td>{{detail.Salary}}</td>
             <td>
-                <!-- <button type="button" (click)="onEdit(Row)" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>&nbsp;
-                <button type="button" class="btn btn-danger" (click)="deleteEmp()">Delete</button> -->
-            </td>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button type="button" class="btn btn-danger mx-2">Delete</button>
 
+            </td>
         </tr>
     </tbody>
 </table>
