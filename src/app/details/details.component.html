@@ -2,9 +2,7 @@
     <div class="container">
         <h1>Details of Employees</h1>
         <div class="d-flex">
-            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                AddEmployee
-          </button>
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">AddEmployee </button>
 
         </div>
     </div>
@@ -38,13 +36,12 @@
     </tbody>
 </table>
 
-<div class=" modal fade" id="exampleModal" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="exampleModalLabel">Employee_Details</h4>
-                <button type="button" class="btn-close" data-bs-dismiss="modal
-                   " aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container">
@@ -69,16 +66,18 @@
                             <label class="form-label">Email</label>
                             <input type="email" formControlName="Email" class="form-control" />
                         </div>
+
                         <div class="mb-3">
                             <label class="form-label">Salary</label>
                             <input type="text" formControlName="Salary" class="form-control" />
                         </div>
+
                     </form>
                 </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" id="cancel" class="btn btn-secondary">Close</button>
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary" (click)="postEmpDetails()">Add</button>
             </div>
         </div>
