@@ -2,15 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { async, map, Observable } from 'rxjs';
 import { identifierName } from '@angular/compiler';
+import { DatatypesModel } from '../details/details.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  deleteEmp(id: any) {
-    throw new Error('Method not implemented.');
-  }
+
   constructor(private http: HttpClient) { }
+
+
+ 
+
 
   url = 'http://localhost:3000/posts';
   // CALLING GET METHOD
@@ -29,17 +32,27 @@ export class ApiService {
         return res;
       }));
 
-     // Delete Employee
 
-      // deleteEmployee(data:any,id: number){
 
-      // return this.http.delete('http://localhost:3000/posts/'+id)
-      // .pipe(map((res: any) => {
-      //   return res;
-      // }))
-      // }
 
-    // Update Employee
+
+
+
+
+
+
+
+
+
+  }
+}
+
+
+
+function deldata(id: any, number: any) {
+  throw new Error('Function not implemented.');
+}
+  // Update Employee
 
     // updateData(data: any, id: number){
     //   return this.http.put<any>('http://localhost:3000/posts/', +id, data)
@@ -47,13 +60,3 @@ export class ApiService {
     //       return res;
     //     }))
     //   }
-
- 
-
-     
-    
-
-  }
-}
-
-

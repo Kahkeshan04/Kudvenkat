@@ -32,7 +32,7 @@ export class DetailsComponent implements OnInit {
     this.getAllDetails()
   }
 
-  //Get Method calling 
+  //Get Method calling
 
   getAllDetails(){
     this.api.getdata().subscribe(res => {
@@ -40,7 +40,7 @@ export class DetailsComponent implements OnInit {
     })
   }
 
-  postEmpDetails() {
+  postEmpDetails(){
     this.typesobj.firstname = this.formValue.value.firstname;
     this.typesobj.lastname = this.formValue.value.lastname;
     this.typesobj.Mobile = this.formValue.value.Mobile;
@@ -51,24 +51,19 @@ export class DetailsComponent implements OnInit {
       .subscribe((res) => {
         console.log(res);
         alert("Employee added Successfully");
-      
+
         let ref = document.getElementById('cancel');
         ref?.click();
-       
+
         this.formValue.reset();
       },
         err => {
           alert("Something went wrong, May de Employee data doesn't added to the data base");
-        })  
+        })
   }
 
-  deleteEmp(row:any){
+  
 
-    // this.api.deleteEmployee(row.id).subscribe(res=>{
-    //   alert("Deleted Selected Data Successfully");
-    //   this.getAllDetails()
-    // })
-  }
 
   // onEdit(){
   //   this.formValue.controls['firstname'].setValue(row.firstname);
