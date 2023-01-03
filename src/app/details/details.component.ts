@@ -63,7 +63,9 @@ export class DetailsComponent implements OnInit {
   }
 
   
-
+  delEmp(id:number){
+    this.api.deldata(id).subscribe(emp=>{this.getAllDetails();})
+  }
 
   // onEdit(){
   //   this.formValue.controls['firstname'].setValue(row.firstname);

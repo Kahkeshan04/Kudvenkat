@@ -12,9 +12,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
 
- 
-
-
   url = 'http://localhost:3000/posts';
   // CALLING GET METHOD
 
@@ -32,26 +29,15 @@ export class ApiService {
         return res;
       }));
 
+  }
 
-
-
-
-
-
-
-
-
-
-
-
+  deldata(id: number): Observable<number> {
+    return this.http.delete<number>(this.url+"/"+id);
   }
 }
 
 
 
-function deldata(id: any, number: any) {
-  throw new Error('Function not implemented.');
-}
   // Update Employee
 
     // updateData(data: any, id: number){
